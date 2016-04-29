@@ -1,13 +1,13 @@
 .idea
 .gradle
 build/
-gradlew.bat
 out/
 *.ipr
 *.iws
 *.iml
 .DS_Store
 node_modules
+*.exe
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
