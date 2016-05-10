@@ -8,8 +8,10 @@ using System.Text;
 */
 class Receiver
 {
-    public static void Main() {
-        var factory = new ConnectionFactory() { HostName = "localhost" };
+    public static void Main(string[] args) {
+        var hostname = "localhost";
+        if (args.Length > 0) hostname = args[0];
+        var factory = new ConnectionFactory() { HostName = hostname };
         using(var connection = factory.CreateConnection())
         using(var channel = connection.CreateModel())
         {
