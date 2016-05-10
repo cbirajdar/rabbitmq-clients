@@ -7,7 +7,7 @@ public class RabbitMqMessageBroker {
 
     private final String QUEUE = "TestQueue";
 
-    private final String hostname = "localhost";
+    private final String hostname = System.getProperty("host");
 
     private Connection connection;
 

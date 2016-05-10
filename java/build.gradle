@@ -15,3 +15,11 @@ dependencies {
     compile 'com.rabbitmq:amqp-client:3.6.1'
     testCompile 'junit:junit:4.12'
 }
+
+task execute(type: JavaExec) {
+    main = "JavaMain"
+    classpath = sourceSets.main.runtimeClasspath;
+    if (project.hasProperty('jvmArgs')) {
+        jvmArgs project.jvmArgs.split('\\s+');
+    }
+}
