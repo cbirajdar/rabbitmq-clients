@@ -2,9 +2,13 @@
 
 // Declare amqp dependency
 var amqp = require("amqplib/callback_api");
+var host = "localhost";
+
+if (process.argv[2] != null)
+  host = process.argv[2];
 
 // Create connection
-amqp.connect('amqp://localhost', function(err, conn) {
+amqp.connect('amqp://' + host, function(err, conn) {
   // Create channel
   conn.createChannel(function(err, ch) {
       // Define queue
