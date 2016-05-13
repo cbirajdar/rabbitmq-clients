@@ -5,7 +5,7 @@ Before executing these programs, make sure you have rabbitmq server running loca
 #### <u>Node.js</u>
 
 - ```cd node.js```
-- ```npm install amqplib```
+- ```npm install```
 - To send, ```node send.js $host```
 - To receive, ```node receive.js $host```
 
